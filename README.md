@@ -139,6 +139,14 @@ Use ModelViewer2:0, located for example in E:\SteamLibrary\steamapps\common\DCSW
 
 ___
 
+## Source of information:
+
+https://historiadafab.rudnei.cunha.nom.br/
+
+https://www.fcm.eti.br/tucano.html
+
+___
+
 ## ✉️ Contato
 
 Denis - exemplo@exemplo.com
