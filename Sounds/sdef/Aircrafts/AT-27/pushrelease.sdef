@@ -1,4 +1,4 @@
-wave = "Effects/Aircrafts/A-29B/pushrelease.wav"
+wave = "Effects/Aircrafts/AT-27/pushrelease.wav"
 
 inner_radius = 1
 outer_radius = 4

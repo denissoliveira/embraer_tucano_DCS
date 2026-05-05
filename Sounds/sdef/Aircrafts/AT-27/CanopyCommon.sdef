@@ -1,4 +1,4 @@
-wave = "Effects/Aircrafts/A-29B/CanopyCommon"
+wave = "Effects/Aircrafts/AT-27/CanopyCommon"
 inner_radius = 10
 outer_radius = 100
 gain = 0.0

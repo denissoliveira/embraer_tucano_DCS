@@ -1,21 +1,21 @@
 wave = {
-    "Effects/Aircrafts/A-29B/click1.wav",
-    "Effects/Aircrafts/A-29B/click2.wav",
-    "Effects/Aircrafts/A-29B/click3.wav",
-    "Effects/Aircrafts/A-29B/click4.wav",
-    "Effects/Aircrafts/A-29B/click5.wav",
-    "Effects/Aircrafts/A-29B/click6.wav",
-    "Effects/Aircrafts/A-29B/click7.wav",
-    "Effects/Aircrafts/A-29B/click8.wav",
-    "Effects/Aircrafts/A-29B/click9.wav",
-    "Effects/Aircrafts/A-29B/click10.wav",
-    "Effects/Aircrafts/A-29B/click11.wav",
-    "Effects/Aircrafts/A-29B/click12.wav",
-    "Effects/Aircrafts/A-29B/click13.wav",
-    "Effects/Aircrafts/A-29B/click14.wav",
-    "Effects/Aircrafts/A-29B/click15.wav",
-    "Effects/Aircrafts/A-29B/click16.wav",
-    "Effects/Aircrafts/A-29B/click17.wav"
+    "Effects/Aircrafts/AT-27/click1.wav",
+    "Effects/Aircrafts/AT-27/click2.wav",
+    "Effects/Aircrafts/AT-27/click3.wav",
+    "Effects/Aircrafts/AT-27/click4.wav",
+    "Effects/Aircrafts/AT-27/click5.wav",
+    "Effects/Aircrafts/AT-27/click6.wav",
+    "Effects/Aircrafts/AT-27/click7.wav",
+    "Effects/Aircrafts/AT-27/click8.wav",
+    "Effects/Aircrafts/AT-27/click9.wav",
+    "Effects/Aircrafts/AT-27/click10.wav",
+    "Effects/Aircrafts/AT-27/click11.wav",
+    "Effects/Aircrafts/AT-27/click12.wav",
+    "Effects/Aircrafts/AT-27/click13.wav",
+    "Effects/Aircrafts/AT-27/click14.wav",
+    "Effects/Aircrafts/AT-27/click15.wav",
+    "Effects/Aircrafts/AT-27/click16.wav",
+    "Effects/Aircrafts/AT-27/click17.wav"
     }
 
 inner_radius = 1

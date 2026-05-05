@@ -1,1 +1,1 @@
-return _('MK1')
+return _('VSN_F100')

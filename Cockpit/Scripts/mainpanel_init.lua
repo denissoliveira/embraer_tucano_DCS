@@ -1,40 +1,77 @@
---dofile(LockOn_Options.script_path.."VR_config.lua")
-
-shape_name   	   = "cockpit_AT27"
+shape_name   	   = "Cockpit_VSN_F104G"
 is_EDM			   = true
 new_model_format   = true
-ambient_light    = {255,255,255}
-ambient_color_day_texture    = {72, 100, 160}
-ambient_color_night_texture  = {40, 60 ,150}
-ambient_color_from_devices   = {50, 50, 40}
-ambient_color_from_panels	 = {35, 25, 25}
 
-local ft_to_meter = 0.3048
 
-dusk_border					 = 0.4
-draw_pilot					 = false
 
 external_model_canopy_arg	 = 38
 
 use_external_views = false
---cockpit_local_point = {2.68, 1.142, 0.0}
 
-day_texture_set_value   = 0.0
-night_texture_set_value = 0.1
+local  aircraft = get_aircraft_type()
 
 local controllers = LoRegisterPanelControls()
-local knots_to_mps = 1/1.944--1.852
 
-mirrors_data =
-{
-    center_point 	= {0.493,0.092,0.00},
-    width 		 	= 1.0, --1.2,
-    aspect 		 	= 1.0,
-	rotation 	 	= math.rad(-1);
-	animation_speed = 2.0;
-	near_clip 		= 0.1;
-	middle_clip		= 10;
-	far_clip		= 5000;
-}
+--HUD_BRIGHTNESS_DOWN      			  = CreateGauge("parameter")
+--HUD_BRIGHTNESS_DOWN.parameter_name   = "HUDBrightnessDown"
+--HUD_BRIGHTNESS_DOWN.arg_number    	  = 0
+--HUD_BRIGHTNESS_DOWN.input    		  = {0,100}
+--HUD_BRIGHTNESS_DOWN.output    		  = {0,1}
 
-need_to_be_closed = true
+need_to_be_closed = true -- schließt diese Lua nach der Initialisierung
+
+-- RudderPedals						= CreateGauge()
+-- RudderPedals.arg_number				= 500
+-- RudderPedals.input					= {-100,100}
+-- RudderPedals.output					= {-1,1}
+-- RudderPedals.controller				= controllers.base_gauge_RudderPosition
+
+-- StickPitch							= CreateGauge()
+-- StickPitch.arg_number				= 1001
+-- StickPitch.input					= {-100, 100}
+-- StickPitch.output					= {-1, 1}
+-- StickPitch.controller				= controllers.base_gauge_StickRollPosition
+
+-- StickRoll							= CreateGauge()
+-- StickRoll.arg_number				= 1002
+-- StickRoll.input						= {-100, 100}
+-- StickRoll.output					= {-1, 1}
+-- StickRoll.controller				= controllers.base_gauge_StickPitchPosition
+
+-- ThrottleL							= CreateGauge()
+-- ThrottleL.arg_number				= 104
+-- ThrottleL.input						= {0, 100}
+-- ThrottleL.output					= {0, 1}
+-- ThrottleL.controller				= controllers.base_gauge_ThrottleLeftPosition
+
+-- ThrottleR							= CreateGauge()
+-- ThrottleR.arg_number				= 105
+-- ThrottleR.input						= {0, 100}
+-- ThrottleR.output					= {0, 1}
+-- ThrottleR.controller				= controllers.base_gauge_ThrottleRightPosition
+
+-- mirrors_data = {
+--     center_point          = {0.0,0.0,0}, 
+--     width                 = 0.8, --integrated (keep in mind that mirrors can be none planar )
+--     aspect                = 5.0,
+--     rotation              = math.rad(-4);
+--     animation_speed       = 4.0;
+--     near_clip             = 0.1;
+--     middle_clip           = 40;
+--     far_clip              = 60000;
+--     flaps                 = 
+--     {
+--         "PNT_MIRROR_CTR",
+--         "PNT_L_MIRROR",
+--         "PNT_R_MIRROR",
+--     }
+-- }
+-- mirrors_draw                        = CreateGauge()
+-- mirrors_draw.arg_number                = 1000
+-- mirrors_draw.input                   = {0,1}
+-- mirrors_draw.output                   = {1,0}
+-- mirrors_draw.controller             = controllers.mirrors_draw
+--need_to_be_closed = true
+-- need_to_be_closed = false
+
+
