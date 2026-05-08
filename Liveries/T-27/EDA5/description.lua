@@ -18,23 +18,21 @@ livery = {
 	{"MascM",	ROUGHNESS_METALLIC			,	"capmasks_RoughMet", true};
 
 
-	{"Helmet_glass",	DIFFUSE			,	"cap_viseira", true};
+	{"Helmet_glass",	DIFFUSE			,	"EDA_N_cap_Viseira", true};
 	{"Helmet_glass",	ROUGHNESS_METALLIC			,	"cap_Viseira_RoughMet", true};
 	
-	{"CAP01",	DIFFUSE			,	"cappilot01", true};
+	{"CAP01",	DIFFUSE			,	"EDA_N_capPilot01", true};
 	{"CAP01",	NORMAL_MAP			,	"cappilot01_nm", true};
 
 	{"AT27_GLASS",	DIFFUSE			,	"at-27_glass", true};
 	{"AT27_GLASS",	NORMAL_MAP			,	"AT-27_Glass_Nrm", true};
 	{"AT27_GLASS",	ROUGHNESS_METALLIC			,	"AT-27_Glass_RoughMet", true};
 
-	--{"Wing Right",	DIFFUSE			,	"at-27_parts", true};
-
 	{"GALLET",	DIFFUSE			,	"gallet", true};
 	{"GALLET",	NORMAL_MAP			,	"gallet_nm", true};
 	{"GALLET",	ROUGHNESS_METALLIC			,	"gallet_RoughMet", true};
 
-	{"CAP02",	DIFFUSE			,	"cappilot02", true};
+	{"CAP02",	DIFFUSE			,	"EDA_N_capPilot02", true};
 	{"CAP02",	NORMAL_MAP			,	"cappilot02_nm", true};
 	{"CAP02",	ROUGHNESS_METALLIC			,	"cappilot02_RoughMet", true};
 
@@ -59,9 +57,16 @@ name = "T-27 05 Air Demonstration Squadron (EDA) 2001-2012"
 countries = {}
 custom_args =
 {
+	-- Front pilot
 	[810] = 0.4, -- Pilot helmet
 	[811] = 0, -- Helmet visor 0-close, 1-open
 	[812] = 0, -- Front helmet visor 0-close, 1-open
+	[813] = 1, -- G-suit
+	-- Rear Pilot
+	[814] = 0.4, -- Pilot helmet
+	[815] = 0, -- Helmet visor 0-close, 1-open
+	[816] = 0, -- Front helmet visor 0-close, 1-open
+	[817] = 1, -- G-suit
 
 	[820] = 0, -- Antennas
 	[821] = 1, -- Down antenna

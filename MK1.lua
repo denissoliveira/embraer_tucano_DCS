@@ -17,7 +17,7 @@ SHORTSTFM =  {
     livery_entry        = SHORTST,
 
     propellorShapeType  = "3ARG_PROC_BLUR",
-    propellorShapeName  = "ShortsT1_blade.FBX",
+    propellorShapeName  = "EMB312_blade.FBX",
     propellorShapeBlurX = 0.6,
 
     shape_table_data    = 

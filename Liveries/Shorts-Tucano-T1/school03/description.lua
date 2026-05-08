@@ -1,11 +1,13 @@
 livery = {
 	{"AT27",	DIFFUSE			,	"at-27_fuselage", false};
-	{"AT27",	NORMAL_MAP			,	"../school01/at-27_fuselage_nm", false};
-	{"AT27", ROUGHNESS_METALLIC ,"../school01/AT-27_Fuselage_RoughMet",false};
+	{"AT27",	NORMAL_MAP			,	"shorts_fuselage_nm", true};
+	{"AT27", ROUGHNESS_METALLIC ,"shorts_Fuselage_RoughMet",true};
 
-	{"AT27_GLASS",	DIFFUSE			,	"../school01/at-27_glass", false};
-	{"AT27_GLASS",	NORMAL_MAP			,	"AT-27_Glass_Nrm", true};
-	{"AT27_GLASS",	ROUGHNESS_METALLIC			,	"AT-27_Glass_RoughMet", true};
+	{"AT27_GLASS",	DIFFUSE			,	"shorts_glass", true};
+	{"AT27_GLASS",	NORMAL_MAP			,	"shorts_Glass_Nrm", true};
+	{"AT27_GLASS",	ROUGHNESS_METALLIC			,	"shorts_Glass_RoughMet", true};
+
+	{"AT27_PILOT",	DIFFUSE			,	"RAF_Pilot_AL", true};
 	
 	{"AT27PARTS", DIFFUSE, "a29b_parts", true};
 	{"AT27PARTS", NORMAL_MAP, "a29b_parts_b", true};
@@ -51,6 +53,9 @@ livery = {
 	{"AT27_PARTS",	DIFFUSE			,	"at-27_parts", true};
 	{"AT27_PARTS",	NORMAL_MAP			,	"at-27_parts_nm", true};
 	{"AT27_PARTS",	ROUGHNESS_METALLIC			,	"at-27_parts_RoughMet", true};
+
+	{"RAF_MK",	DIFFUSE			,	"raf_helmet", true};
+	{"RAF_MK",	NORMAL_MAP			,	"raf_helmet_nm", true};
 }
 
 name = "Shorts Tucano RAF"

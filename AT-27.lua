@@ -9,8 +9,8 @@ local armamentosTank  = { { CLSID = "{AT27_TANK}" }, }
 local bombs_Rockts    = {
 	{ CLSID = "{90321C8E-7ED1-47D4-A160-E074D5ABD902}" }, --MK81
 	{ CLSID = "{MK-81SE}" },
-	{ CLSID = "{LAU-33A}",                             arg_value = 0.0 },
-	{ CLSID = "{BDU-33}",                              arg_value = 0.0 },
+	{ CLSID = "{LAU-33A}"},
+	{ CLSID = "{BDU-33}"},
 	{ CLSID = "M260_HYDRA" },
 	{ CLSID = "M260_HYDRA_WP" },
 	{ CLSID = "{LAU68_FFAR_WP156}" },

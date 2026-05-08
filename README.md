@@ -1,5 +1,9 @@
 # DCS World Embraer Tucano
 
+Forum - https://forum.dcs.world/topic/387906-embraer-emb-312-tucano-and-variants/
+
+Download in DCS page - https://www.digitalcombatsimulator.com/en/files/3349920/
+
 ## EMB-312 Tucano
 
 ![Tucano](Doc/tucano.jpg)
