@@ -1,4 +1,4 @@
-shape_name   	   = "Cockpit_VSN_F104G"
+shape_name   	   = "cockpit_AT27"
 is_EDM			   = true
 new_model_format   = true
 

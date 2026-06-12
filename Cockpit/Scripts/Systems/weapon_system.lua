@@ -9,6 +9,12 @@ make_default_activity(update_time_step)
 
 local sensor_data = get_base_data()
 
+-- AT-27 nao usa tanques de combustivel do mod VSN G.91. Definimos sentinelas
+-- para neutralizar as comparacoes herdadas em UsablePylons() sem alterar a
+-- logica de selecao de armas (essas CLSIDs nunca casam com nenhuma arma real).
+VSN_G91YF_PTB = "VSN_G91YF_PTB_INEXISTENTE"
+VSN_G91YR_PTB = "VSN_G91YR_PTB_INEXISTENTE"
+
 
 --dev:
 --devices for direct weapon-usage
@@ -718,8 +724,8 @@ function PylonInfo()
 end
 
 function UsablePylons()
-	--hier wird geprüft, ob die ausgewählten Pylons auch die Waffen tragen, 
-	--die mit den verschiedenen Selector-Switches ausgewählt wurden.
+	--hier wird geprï¿½ft, ob die ausgewï¿½hlten Pylons auch die Waffen tragen, 
+	--die mit den verschiedenen Selector-Switches ausgewï¿½hlt wurden.
 	
 	--Bomben sind Level 2 Nr.5
 	--Cluster sind Level 3 Nr.38
@@ -829,7 +835,7 @@ function post_initialize()
 	--print_message_to_user("Missile_Seeker_Azimuth " ..tostring(ir_missile_des_az_param:get()))
 	
 	-----------------------------------------------------------------------------------
-	--Das hier ist GOLD, da es ALLE aktuellen Params anzeigt mit Wert und Veränderung--
+	--Das hier ist GOLD, da es ALLE aktuellen Params anzeigt mit Wert und Verï¿½nderung--
 	--show_param_handles_list()
 	-----------------------------------------------------------------------------------
 	
@@ -879,7 +885,7 @@ function update()
 		--end
 	else	
 
-		-- radar is providíng target position, but it no lock was achieved yet
+		-- radar is providï¿½ng target position, but it no lock was achieved yet
 	    if ir_missile_des_az_param:get() ~= 0.0 then
 			print_message_to_user("Desired Azimuth " ..tostring(ir_missile_des_az_param:get()))
 		end
@@ -997,7 +1003,7 @@ function keys_pickle_on(value)
 	if (station_1 == 1) and
 		(Pylon1InUse == 1) and
 		((usableWeapon == 1) or (usableWeapon == 2) or (usableWeapon == 3)) then
-		--dev:launch_station(3) --damit schmeißt er immer eine vom Rack
+		--dev:launch_station(3) --damit schmeiï¿½t er immer eine vom Rack
 		Salvo(3)
 	elseif(station_1 == 1) and
 		(Pylon1InUse == 1) and
@@ -1042,10 +1048,10 @@ end
 
 
 function UsablePylons()
-	--hier wird geprüft, ob die ausgewählten Pylons auch die Waffen tragen, 
-	--die mit den verschiedenen Selector-Switches ausgewählt wurden.
-	--Es soll also geprüft werden, ob alle switches (und wie) aktiviert sind. 
-	--Z.B. würde Rockets mit Station 2 und 4 nicht zum Abwurf von Bomben auf Station 2 und 4 führen(hoffentlich).
+	--hier wird geprï¿½ft, ob die ausgewï¿½hlten Pylons auch die Waffen tragen, 
+	--die mit den verschiedenen Selector-Switches ausgewï¿½hlt wurden.
+	--Es soll also geprï¿½ft werden, ob alle switches (und wie) aktiviert sind. 
+	--Z.B. wï¿½rde Rockets mit Station 2 und 4 nicht zum Abwurf von Bomben auf Station 2 und 4 fï¿½hren(hoffentlich).
 	--Bomben sind Nr.5 Level 2
 	--Rockets sind Nr.33 Level 2
 	
@@ -1132,11 +1138,11 @@ function Salvo(st)
 	
 	--Aufbau: st im Konstruktor wird von der pickle_on funktion gesetzt und hier von st in station 
 	--umgewandelt, damit immer die fragliche Station gedropped wird.
-	--nach den "gezählten" dropps soll mit return die Funktion verlassen werden, wobei "ohne" return so lnge 
+	--nach den "gezï¿½hlten" dropps soll mit return die Funktion verlassen werden, wobei "ohne" return so lnge 
 	--geworfen wird, bis der button losgelassen wird (hoffentlich)
 	
 	--ACHTUNG: Die Salvo-Funktion muss eigentlich nicht upgedated werden, weil sie nur durch die keys_pickle_on-Funktion 
-	--ausgelöst wird.
+	--ausgelï¿½st wird.
 	
 	local station = st
 	

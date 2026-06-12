@@ -12,7 +12,11 @@ attributes = {
 	-- "avNightVisionGoggles",
 }
 ---------------------------------------------
---MainPanel = {"ccMainPanel",LockOn_Options.script_path.."mainpanel_init.lua"}
+-- MainPanel REATIVADO (Fase 3): carrega mainpanel_init.lua, que define o
+-- shape_name = "cockpit_AT27" (modelo 3D do cockpit). Sem isto o cockpit nao
+-- renderiza ao voar. Classe generica "ccMainPanel" + 3o argumento {} seguem o
+-- padrao usado por modulos pilotaveis do DCS (ex.: TF-51D).
+MainPanel = {"ccMainPanel",LockOn_Options.script_path.."mainpanel_init.lua", {} }
 
 creators = {}
 

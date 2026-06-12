@@ -91,12 +91,13 @@ make_view_settings('T-27',             ViewSettings, SnapViews)
 make_view_settings('EMB-312F',         ViewSettings, SnapViews)
 make_view_settings('Shorts-Tucano-T1', ViewSettings, SnapViews)
 
--- AI-only mode: cockpit is not yet adapted (mainpanel_init.lua still references
--- Cockpit_VSN_F104G and weapon_system.lua references undefined VSN_G91YF_PTB).
--- Re-enable these calls once the cockpit scripts are properly adapted to the AT-27.
--- make_flyable('AT-27',            current_mod_path.."/Cockpit/Scripts/", nil, current_mod_path.."/Entry/comm.lua")
--- make_flyable('T-27',             current_mod_path.."/Cockpit/Scripts/", nil, current_mod_path.."/Entry/comm.lua")
--- make_flyable('EMB-312F',         current_mod_path.."/Cockpit/Scripts/", nil, current_mod_path.."/Entry/comm.lua")
--- make_flyable('Shorts-Tucano-T1', current_mod_path.."/Cockpit/Scripts/", nil, current_mod_path.."/Entry/comm.lua")
+-- Cockpit pilotavel (Fase 3): usa o modelo proprio cockpit_AT27 (sem dependencia externa)
+-- e as referencias VSN do weapon_system foram neutralizadas. EM TESTE.
+-- Se o cockpit falhar ao tentar VOAR, basta comentar estas 4 linhas e reimplantar:
+-- o modo IA / Editor de Missoes NAO e afetado por problema de cockpit.
+make_flyable('AT-27',            current_mod_path.."/Cockpit/Scripts/", nil, current_mod_path.."/Entry/comm.lua")
+make_flyable('T-27',             current_mod_path.."/Cockpit/Scripts/", nil, current_mod_path.."/Entry/comm.lua")
+make_flyable('EMB-312F',         current_mod_path.."/Cockpit/Scripts/", nil, current_mod_path.."/Entry/comm.lua")
+make_flyable('Shorts-Tucano-T1', current_mod_path.."/Cockpit/Scripts/", nil, current_mod_path.."/Entry/comm.lua")
 
 plugin_done()
