@@ -66,9 +66,9 @@ A27TFM = {
 
 	net_animation             = { 551, 552, 553, 554, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 140, 141, 142, 900, 901, 99, 400, 401, 402, 38, },
 	mapclasskey               = "P0091000025",
-	attribute                 = { wsType_Air, wsType_Airplane, wsType_Fighter, WSTYPE_PLACEHOLDER, "Battleplanes", },
-	-- Correção da Categoria para comportamento realista da IA
-	Categories 			= {"{78EFB7A2-FD52-4b57-A6A6-3BF0E1D6555F}", "Attack", "Bomber", "Trainer", "Reconnaissance", },	
+	attribute                 = { wsType_Air, wsType_Airplane, wsType_Tactical_bomber, WSTYPE_PLACEHOLDER, "Planes", },
+	-- Categoria realista: treinador armado leve. Removido "Bomber" (Tucano nao e bombardeiro).
+	Categories 			= {"{78EFB7A2-FD52-4b57-A6A6-3BF0E1D6555F}", "Attack", "Trainer", "CAS", "Reconnaissance", },	
 
 	-- Dados Físicos AT-27 (PT-6A)
 	M_empty                   = 1810,  -- kg

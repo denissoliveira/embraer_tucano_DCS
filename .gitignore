@@ -1,0 +1,29 @@
+# Sistema operacional
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+# Editores / IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Backups e temporarios
+*.bak
+*.backup
+*.tmp
+*.orig
+
+# DCS - logs e dumps (caso copie a pasta inteira do Saved Games)
+Logs/
+*.dmp
+*.log
+
+# Arquivos compactados de redistribuicao
+*.7z
+*.rar
+# Nao excluir AT-27.zip - e necessario para texturas (texturas embutidas via VFS)
+!Textures/AT-27.zip

@@ -53,8 +53,8 @@ A27TFM = {
 
 	net_animation             = { 551, 552, 553, 554, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 140, 141, 142, 900, 901, 99, 400, 401, 402, 38, },
 	mapclasskey               = "P0091000025",
-	attribute                 = { wsType_Air, wsType_Airplane, wsType_Fighter, WSTYPE_PLACEHOLDER, "Battleplanes", },
-	-- Correção da Categoria para comportamento realista da IA
+	attribute                 = { wsType_Air, wsType_Airplane, wsType_Tactical_bomber, WSTYPE_PLACEHOLDER, "Planes", },
+	-- Categoria realista: T-27 e treinador puro, sem armamento operacional.
 	Categories 			= {"{78EFB7A2-FD52-4b57-A6A6-3BF0E1D6555F}", "Trainer", "Reconnaissance", },	
 
 	-- Dados Físicos AT-27 (PT-6A)
@@ -209,7 +209,7 @@ A27TFM = {
 
 	Tasks                     =
 	{
-		aircraft_task(CAS), aircraft_task(AFAC), aircraft_task(AFAC), aircraft_task(Reconnaissance),
+		aircraft_task(Reconnaissance),
     },
 	DefaultTask               = aircraft_task(Reconnaissance),
 

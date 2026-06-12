@@ -41,10 +41,10 @@ Options =
 
 	InputProfiles =
 	{
-		["AT-27"]		= current_mod_path..'/Input/AT-27',
-		["MK1"]		= current_mod_path..'/Input/MK1',
-		["T-27"]		= current_mod_path..'/Input/T-27',
-		["EMB-312F"]		= current_mod_path..'/Input/EMB-312F',
+		["AT-27"]			 = current_mod_path..'/Input/AT-27',
+		["Shorts-Tucano-T1"] = current_mod_path..'/Input/MK1',
+		["T-27"]			 = current_mod_path..'/Input/T-27',
+		["EMB-312F"]		 = current_mod_path..'/Input/EMB-312F',
  	},
 
 	LogBook =
@@ -54,8 +54,8 @@ Options =
 			type	= "AT-27",
 		},
 		{
-			name	= _("MK1"),
-			type	= "MK1",
+			name	= _("Shorts Tucano T.Mk1"),
+			type	= "Shorts-Tucano-T1",
 		},
 		{
 			name	= _("T-27"),
@@ -84,14 +84,17 @@ dofile(current_mod_path.."/Entry/MK1.lua")
 dofile(current_mod_path.."/Entry/EMB312F.lua")
 dofile(current_mod_path.."/Entry/T-27.lua")
 
-make_view_settings('AT-27', ViewSettings, SnapViews)
-make_view_settings('T-27', ViewSettings, SnapViews)
-make_view_settings('EMB-312F', ViewSettings, SnapViews)
-make_view_settings('MK1', ViewSettings, SnapViews)
+make_view_settings('AT-27',            ViewSettings, SnapViews)
+make_view_settings('T-27',             ViewSettings, SnapViews)
+make_view_settings('EMB-312F',         ViewSettings, SnapViews)
+make_view_settings('Shorts-Tucano-T1', ViewSettings, SnapViews)
 
-make_flyable('AT-27', current_mod_path.."/Cockpit/Scripts/", nil , current_mod_path.."/Entry/comm.lua")
-make_flyable('T-27', current_mod_path.."/Cockpit/Scripts/", nil , current_mod_path.."/Entry/comm.lua")
-make_flyable('EMB-312F', current_mod_path.."/Cockpit/Scripts/", nil , current_mod_path.."/Entry/comm.lua")
-make_flyable('MK1', current_mod_path.."/Cockpit/Scripts/", nil , current_mod_path.."/Entry/comm.lua")
+-- AI-only mode: cockpit is not yet adapted (mainpanel_init.lua still references
+-- Cockpit_VSN_F104G and weapon_system.lua references undefined VSN_G91YF_PTB).
+-- Re-enable these calls once the cockpit scripts are properly adapted to the AT-27.
+-- make_flyable('AT-27',            current_mod_path.."/Cockpit/Scripts/", nil, current_mod_path.."/Entry/comm.lua")
+-- make_flyable('T-27',             current_mod_path.."/Cockpit/Scripts/", nil, current_mod_path.."/Entry/comm.lua")
+-- make_flyable('EMB-312F',         current_mod_path.."/Cockpit/Scripts/", nil, current_mod_path.."/Entry/comm.lua")
+-- make_flyable('Shorts-Tucano-T1', current_mod_path.."/Cockpit/Scripts/", nil, current_mod_path.."/Entry/comm.lua")
 
 plugin_done()
