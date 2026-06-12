@@ -1,6 +1,6 @@
 declare_loadout({
 	category		 = CAT_FUEL_TANKS,
-	CLSID			 = "{AT27_TANK}",
+	CLSID			 = "{AT-27_TANK}",
 	attribute		 =  {wsType_Air,wsType_Free_Fall,wsType_FuelTank,WSTYPE_PLACEHOLDER},
 
 	Picture			 = "ptb2.png",

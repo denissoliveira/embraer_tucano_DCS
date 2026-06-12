@@ -4,18 +4,18 @@ local armamentos_IN   = {}
 local armamentos_OUT  = {}
 
 local armamentosClean = { { CLSID = "<CLEAN>", arg_value = 1 } }
-local armamentosTank  = { { CLSID = "{AT27_TANK}" }, }
+local armamentosTank  = { { CLSID = "{AT-27_TANK}" }, }
 
+-- Loadouts: apenas CLSIDs do DCS base (sem dependencia de outros mods).
+-- CLSIDs proprietarios do A29MEFM (MK-81SE, LAU-33A, BDU-33, M260_HYDRA, LAU68_FFAR_*)
+-- foram removidos porque causavam db_scan assertion failed quando A29MEFM nao estava instalado.
 local bombs_Rockts    = {
-	{ CLSID = "{90321C8E-7ED1-47D4-A160-E074D5ABD902}" }, --MK81
-	{ CLSID = "{MK-81SE}" },
-	{ CLSID = "{LAU-33A}" },
-	{ CLSID = "{BDU-33}" },
-	{ CLSID = "M260_HYDRA" },
-	{ CLSID = "M260_HYDRA_WP" },
-	{ CLSID = "{LAU68_FFAR_WP156}" },
-	{ CLSID = "{LAU68_FFAR_MK1HE}" },
-	{ CLSID = "{LAU68_FFAR_MK5HEAT}" },
+	{ CLSID = "{90321C8E-7ED1-47D4-A160-E074D5ABD902}" }, -- MK-81  (DCS base)
+	{ CLSID = "{BCE4E030-38E9-423E-98ED-24BE3DA87C32}" }, -- MK-82  (DCS base)
+	{ CLSID = "{ADD3FAE1-EBF6-4EF9-8EFC-B36B5DDF1E6B}" }, -- Mk-20 Rockeye (DCS base)
+	{ CLSID = "{A021F29D-18AB-4d3e-985C-FC9C60E35E9E}" }, -- LAU-68 Hydra M151 HE  (DCS base)
+	{ CLSID = "{4F977A2A-CD25-44df-90EF-164BFA2AE72F}" }, -- LAU-68 Hydra M156 WP  (DCS base)
+	{ CLSID = "{174C6E6D-0C3D-42ff-BCB3-0853CB371F5C}" }, -- LAU-68 Hydra Mk5 HEAT (DCS base)
 }
 
 for _, v in ipairs(bombs_Rockts) do
@@ -66,9 +66,10 @@ A27TFM = {
 
 	net_animation             = { 551, 552, 553, 554, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 140, 141, 142, 900, 901, 99, 400, 401, 402, 38, },
 	mapclasskey               = "P0091000025",
-	attribute                 = { wsType_Air, wsType_Airplane, wsType_Tactical_bomber, WSTYPE_PLACEHOLDER, "Planes", },
+	attribute                 = { wsType_Air, wsType_Airplane, wsType_Fighter, WSTYPE_PLACEHOLDER, "Planes", },
 	-- Categoria realista: treinador armado leve. Removido "Bomber" (Tucano nao e bombardeiro).
-	Categories 			= {"{78EFB7A2-FD52-4b57-A6A6-3BF0E1D6555F}", "Attack", "Trainer", "CAS", "Reconnaissance", },	
+	-- wsType_Fighter e a constante valida do DCS (wsType_Tactical_bomber nao existe e quebrava o db_scan).
+	Categories 			= {"{78EFB7A2-FD52-4b57-A6A6-3BF0E1D6555F}", "Attack", "Trainer", "Reconnaissance", },	
 
 	-- Dados Físicos AT-27 (PT-6A)
 	M_empty                   = 1810,  -- kg
@@ -248,7 +249,6 @@ A27TFM = {
 		aircraft_task(Escort), 
 		aircraft_task(Reconnaissance),
         aircraft_task(RunwayAttack),
-		aircraft_task(AFAC),
     },
 	DefaultTask               = aircraft_task(CAS),
 

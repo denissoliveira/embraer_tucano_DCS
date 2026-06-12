@@ -3,7 +3,7 @@ local A27T            = 'T-27'
 local armamentos_IN   = {}
 
 local armamentosClean = { { CLSID = "<CLEAN>", arg_value = 1 } }
-local armamentosTank  = { { CLSID = "{AT27_TANK}" }, }
+local armamentosTank  = { { CLSID = "{AT-27_TANK}" }, }
 
 for _, v in ipairs(armamentosTank) do
 	table.insert(armamentos_IN, v)
@@ -17,7 +17,7 @@ end
 
 A27TFM = {
 	Name                      = A27T,
-	DisplayName               = _('EMB-312 Tucano (AT-27)'),
+	DisplayName               = _('EMB-312 Tucano (T-27)'),
 	HumanCockpit              = true,
 	HumanCockpitPath          = current_mod_path .. '/Cockpit/',
 	Picture                   = current_mod_path .. '/ImagesGui/AT-27.png',
@@ -53,8 +53,9 @@ A27TFM = {
 
 	net_animation             = { 551, 552, 553, 554, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 140, 141, 142, 900, 901, 99, 400, 401, 402, 38, },
 	mapclasskey               = "P0091000025",
-	attribute                 = { wsType_Air, wsType_Airplane, wsType_Tactical_bomber, WSTYPE_PLACEHOLDER, "Planes", },
+	attribute                 = { wsType_Air, wsType_Airplane, wsType_Fighter, WSTYPE_PLACEHOLDER, "Planes", },
 	-- Categoria realista: T-27 e treinador puro, sem armamento operacional.
+	-- wsType_Fighter e a constante valida do DCS (wsType_Tactical_bomber nao existe e quebrava o db_scan).
 	Categories 			= {"{78EFB7A2-FD52-4b57-A6A6-3BF0E1D6555F}", "Trainer", "Reconnaissance", },	
 
 	-- Dados Físicos AT-27 (PT-6A)

@@ -51,22 +51,22 @@ RACK_LIMPO_ST = {
 }
 
 TANQUE_LATERAL_ST = {
-    "{A-29B TANK}",
-	"{A-29B_TANK}",
+	"{AT-27_TANK_L}",
+	"{AT-27_TANK_R}",
 }
 
 TANQUE_CENTRAL_ST = {
-    "{a-29b_tank_c}",
-    "{A-29B TANK}",
+	"{AT-27_TANK_C}",
+	"{AT-27_TANK_L}",
 }
 
 SMOKE_POD_ST = {
-    {CLSID = "{SMOKE-WHITE-A29B}",		    arg_value = 0.2}, -- Smoke pod
-    {CLSID = "{SMOKE-RED-A29B}",		    arg_value = 0.2}, -- Smoke pod
-    {CLSID = "{SMOKE-GREEN-A29B}",		    arg_value = 0.2}, -- Smoke pod
-    {CLSID = "{SMOKE-BLACK-A29B}",		    arg_value = 0.2}, -- Smoke pod
-    {CLSID = "{SMOKE-ORANGE-A29B}",		    arg_value = 0.2}, -- Smoke pod
-    {CLSID = "{SMOKE-YELLOW-A29B}",		    arg_value = 0.2}, -- Smoke pod
+	{CLSID = "{AT-27_SMOKE_WHITE}",		arg_value = 0.2}, -- Smoke pod
+	{CLSID = "{AT-27_SMOKE_RED}",		arg_value = 0.2}, -- Smoke pod
+	{CLSID = "{AT-27_SMOKE_GREEN}",		arg_value = 0.2}, -- Smoke pod
+	{CLSID = "{AT-27_SMOKE_BLACK}",		arg_value = 0.2}, -- Smoke pod
+	{CLSID = "{AT-27_SMOKE_ORANGE}",	arg_value = 0.2}, -- Smoke pod
+	{CLSID = "{AT-27_SMOKE_YELLOW}",	arg_value = 0.2}, -- Smoke pod
 }
 
 function montarRackList(...)
