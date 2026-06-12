@@ -62,18 +62,18 @@ A27TFM = {
 	M_empty                   = 1810, -- kg
 	M_nominal                 = 2550, -- kg
 	M_max                     = 3175, -- kg
-	M_fuel_max                = 415, -- kg
+	M_fuel_max                = 555, -- kg (combustivel real do EMB-312: ~694 L uteis x 0.8 kg/L)
 
-	H_max                     = 8750, -- m
+	H_max                     = 9144, -- m (teto de servico real ~30.000 ft)
 
-	average_fuel_consumption  = 0.055, -- kg/s
+	average_fuel_consumption  = 0.031, -- kg/s (=> ~5 h de autonomia, como o real)
 
 	CAS_min                   = 45,
-	V_opt                     = 122, -- m/s
+	V_opt                     = 114, -- m/s (cruzeiro real ~411 km/h)
 	V_take_off                = 38, -- m/s
 	V_land                    = 34, -- m/s
-	V_max_sea_level           = 127, -- m/s
-	V_max_h                   = 125, -- m/s
+	V_max_sea_level           = 124, -- m/s (vel. max real ~448 km/h)
+	V_max_h                   = 124, -- m/s
 	Vy_max                    = 11.3, -- m/s
 	Mach_max                  = 0.45,
 	Ny_min                    = -3.0,

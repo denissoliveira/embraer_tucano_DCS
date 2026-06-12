@@ -59,11 +59,11 @@ SHORTSTFM =  {
     M_empty                   = 2017,    -- kg (Aeronave consideravelmente mais pesada que o T-27)
     M_nominal                 = 2700,    -- kg (Ajuste proporcional do peso nominal com combustível e 2 pilotos)
     M_max                     = 3275,    -- kg (MTOW do Shorts é maior, chegando a 7,220 lbs)
-    M_fuel_max                = 415,     -- kg
+    M_fuel_max                = 555,     -- kg (capacidade interna real, ~694 L x 0.8 kg/L)
 
     H_max                     = 10365,   -- m (Teto de serviço elevado para 34.000 pés devido ao motor mais potente)
 
-    average_fuel_consumption  = 0.080,   -- kg/s (O Garrett 1.100 SHP tem um consumo maior que o PT6)
+    average_fuel_consumption  = 0.044,   -- kg/s (Garrett mais sedento => ~3,5 h de autonomia)
 
     CAS_min                   = 40,      -- m/s (Velocidade de estol ligeiramente ajustada)
     V_opt                     = 113,     -- m/s (Velocidade de cruzeiro ~407 km/h ou 220 knots)
