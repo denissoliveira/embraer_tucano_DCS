@@ -1,1 +1,1 @@
-return _('VSN_F100')
+return _('EMB-312F')

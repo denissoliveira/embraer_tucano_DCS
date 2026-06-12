@@ -214,6 +214,12 @@ A27TFM = {
     },
 	DefaultTask               = aircraft_task(Reconnaissance),
 
+	-- Centro de massa e momentos de inercia (padrao A-29B)
+	-- center_of_mass: 0.30m a frente da origem do modelo (CG nose-heavy estavel)
+	-- moment_of_inertia: escalonado do A-29B pela razao de massa (1810/3200 = 0.566)
+	center_of_mass            = { 0.30, -0.10, 0.0 },
+	moment_of_inertia         = { 7960.0, 17260.0, 15150.0 },
+
 	SFM_Data                  =
 	{
 		aerodynamics =
@@ -221,8 +227,8 @@ A27TFM = {
 			Cy0        = 0.10,
 			Mzalfa     = 3.0,
 			Mzalfadt   = 0.6,
-			kjx        = 2.0,
-			kjz        = 0.001,
+			kjx        = 5.0,    -- damping de rolagem (aumentado de 2.0 p/ ajudar estabilidade no solo)
+			kjz        = 3.0,    -- damping de yaw/pitch (REVERTIDO: 0.00125 deixou o aviao girar de novo. 3.0 funciona)
 			Czbe       = -0.012,
 			cx_gear    = 0.050,
 			cx_flap    = 0.12,

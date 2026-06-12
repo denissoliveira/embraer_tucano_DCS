@@ -1,1 +1,1 @@
-return _('VSN_F100')
+return _('AT-27')

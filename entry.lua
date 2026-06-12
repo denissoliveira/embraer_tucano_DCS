@@ -44,7 +44,7 @@ Options =
 		["AT-27"]			 = current_mod_path..'/Input/AT-27',
 		["Shorts-Tucano-T1"] = current_mod_path..'/Input/MK1',
 		["T-27"]			 = current_mod_path..'/Input/T-27',
-		["EMB-312F"]		 = current_mod_path..'/Input/EMB-312F',
+		["EMB-312F"]		 = current_mod_path..'/Input/EMB312F',
  	},
 
 	LogBook =

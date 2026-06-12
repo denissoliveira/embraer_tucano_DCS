@@ -162,10 +162,10 @@ join(res.keyCommands,{
 {down = Keys.SetTargetRange_down, name = _('Toggle Target Range down by 100m'), category = _('Gunpipper')},
 -- Weapons
 {down = iCommandPlaneSalvoOnOff, name = _('Salvo Mode'), category = _('Weapons')},
-{pressed = {{key = 'JOY_BTN2'}}, pressed = Keys.pickle_on,	up = Keys.pickle_off, 	name = _('Weapon Release'), category = _('Weapons')},
-{down = {{key = 'JOY_BTN1'}}, down = Keys.trigger_on, 	up = Keys.trigger_off, 	name = _('Cannon Fire'), 	category = _('Weapons')},
+{combos = {{key = 'JOY_BTN2'}}, pressed = Keys.pickle_on,	up = Keys.pickle_off, 	name = _('Weapon Release'), category = _('Weapons')},
+{combos = {{key = 'JOY_BTN1'}}, down = Keys.trigger_on, 	up = Keys.trigger_off, 	name = _('Cannon Fire'), 	category = _('Weapons')},
 --{down = defaultDeviceAssignmentFor("fire"),	down = iCommandPlaneFire, up = iCommandPlaneFireOff, name = _('Weapon Fire'),	category = _('Weapons')},
-{down = {{key = 'JOY_BTN4'}},					down = iCommandPlaneChangeWeapon,				name = _('Weapon Change'),		category = _('Weapons')},
+{combos = {{key = 'JOY_BTN4'}}, down = iCommandPlaneChangeWeapon,				name = _('Weapon Change'),		category = _('Weapons')},
 {down = iCommandPlaneLaunchPermissionOverride,	name = _('Launch Permission Override'), category = _('Weapons') , features = {"LaunchPermissionOverride"}},
 --station commands
 {down = Keys.station_one, name = _('Station ONE toggle'), category = _('Weapons')},

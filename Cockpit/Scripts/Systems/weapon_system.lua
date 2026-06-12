@@ -1055,38 +1055,42 @@ function UsablePylons()
 	--Bomben sind Nr.5 Level 2
 	--Rockets sind Nr.33 Level 2
 	
-	if(WP_Station_One_Param:get() == 1)and
-	((usableWeapon == 1) and (weaponAtStation1L2 == 5))or 
-	(((usableWeapon == 2) or (usableWeapon == 3)) and (weaponAtStation1L3 == 33))or
-	((usableWeapon == 4)  and ((dev:get_station_info(3).CLSID ~= VSN_G91YF_PTB) or (dev:get_station_info(3).CLSID ~= VSN_G91YR_PTB))) or
-	((usableWeapon == 5) and ((dev:get_station_info(3).CLSID == VSN_G91YF_PTB) or (dev:get_station_info(3).CLSID == VSN_G91YR_PTB))) then
+	if (WP_Station_One_Param:get() == 1) and (
+		((usableWeapon == 1) and (weaponAtStation1L2 == 5)) or
+		(((usableWeapon == 2) or (usableWeapon == 3)) and (weaponAtStation1L3 == 33)) or
+		((usableWeapon == 4)  and ((dev:get_station_info(3).CLSID ~= VSN_G91YF_PTB) or (dev:get_station_info(3).CLSID ~= VSN_G91YR_PTB))) or
+		((usableWeapon == 5) and ((dev:get_station_info(3).CLSID == VSN_G91YF_PTB) or (dev:get_station_info(3).CLSID == VSN_G91YR_PTB)))
+	) then
 		Pylon1InUse = 1
 		print_message_to_user("Pylon 1 ready and armed with "..tostring(dev:get_station_info(3)))
 	end
 
-	if(WP_Station_Two_Param:get() == 1)and
-	((usableWeapon == 1)  and (weaponAtStation2L2 == 5))or 
-	(((usableWeapon == 2) or (usableWeapon == 3)) and (weaponAtStation2L3 == 33))or
-	((usableWeapon == 4)  and ((dev:get_station_info(4).CLSID ~= VSN_G91YF_PTB) or (dev:get_station_info(4).CLSID ~= VSN_G91YR_PTB)))or	
-	((usableWeapon == 5) and ((dev:get_station_info(3).CLSID == VSN_G91YF_PTB) or (dev:get_station_info(3).CLSID == VSN_G91YR_PTB))) then	
+	if (WP_Station_Two_Param:get() == 1) and (
+		((usableWeapon == 1)  and (weaponAtStation2L2 == 5)) or
+		(((usableWeapon == 2) or (usableWeapon == 3)) and (weaponAtStation2L3 == 33)) or
+		((usableWeapon == 4)  and ((dev:get_station_info(4).CLSID ~= VSN_G91YF_PTB) or (dev:get_station_info(4).CLSID ~= VSN_G91YR_PTB))) or
+		((usableWeapon == 5) and ((dev:get_station_info(3).CLSID == VSN_G91YF_PTB) or (dev:get_station_info(3).CLSID == VSN_G91YR_PTB)))
+	) then
 		Pylon2InUse = 1
 		print_message_to_user("Pylon 2 ready and armed with "..tostring(dev:get_station_info(4)))	
 	end
 	
-	if(WP_Station_Three_Param:get() == 1)and
-	((usableWeapon == 1) and (weaponAtStation3L2 == 5))or 
-	(((usableWeapon == 2) or (usableWeapon == 3)) and (weaponAtStation3L3 == 33))or 
-	((usableWeapon == 4)  and ((dev:get_station_info(6).CLSID ~= VSN_G91YF_PTB) or (dev:get_station_info(6).CLSID ~= VSN_G91YR_PTB)))or
-	((usableWeapon == 5) and ((dev:get_station_info(3).CLSID == VSN_G91YF_PTB) or (dev:get_station_info(3).CLSID == VSN_G91YR_PTB))) then	
+	if (WP_Station_Three_Param:get() == 1) and (
+		((usableWeapon == 1) and (weaponAtStation3L2 == 5)) or
+		(((usableWeapon == 2) or (usableWeapon == 3)) and (weaponAtStation3L3 == 33)) or
+		((usableWeapon == 4)  and ((dev:get_station_info(6).CLSID ~= VSN_G91YF_PTB) or (dev:get_station_info(6).CLSID ~= VSN_G91YR_PTB))) or
+		((usableWeapon == 5) and ((dev:get_station_info(3).CLSID == VSN_G91YF_PTB) or (dev:get_station_info(3).CLSID == VSN_G91YR_PTB)))
+	) then
 		Pylon3InUse = 1
 		print_message_to_user("Pylon 3 ready and armed with "..tostring(dev:get_station_info(6)))
 	end
 	
-	if(WP_Station_Four_Param:get() == 1)and
-	((usableWeapon == 1) and (weaponAtStation4L2 == 5))or 
-	(((usableWeapon == 2) or (usableWeapon == 3)) and (weaponAtStation4L3 == 33))or
-	((usableWeapon == 4)  and ((dev:get_station_info(7).CLSID ~= VSN_G91YF_PTB) or (dev:get_station_info(7).CLSID ~= VSN_G91YR_PTB)))or
-	((usableWeapon == 5) and ((dev:get_station_info(3).CLSID == VSN_G91YF_PTB) or (dev:get_station_info(3).CLSID == VSN_G91YR_PTB))) then	
+	if (WP_Station_Four_Param:get() == 1) and (
+		((usableWeapon == 1) and (weaponAtStation4L2 == 5)) or
+		(((usableWeapon == 2) or (usableWeapon == 3)) and (weaponAtStation4L3 == 33)) or
+		((usableWeapon == 4)  and ((dev:get_station_info(7).CLSID ~= VSN_G91YF_PTB) or (dev:get_station_info(7).CLSID ~= VSN_G91YR_PTB))) or
+		((usableWeapon == 5) and ((dev:get_station_info(3).CLSID == VSN_G91YF_PTB) or (dev:get_station_info(3).CLSID == VSN_G91YR_PTB)))
+	) then
 		Pylon4InUse = 1
 		print_message_to_user("Pylon 3 ready and armed with "..tostring(dev:get_station_info(7)))
 	end
