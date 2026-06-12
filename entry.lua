@@ -78,7 +78,9 @@ mount_vfs_sound_path (current_mod_path.."/Sounds/")
 
 dofile(current_mod_path.."/Entry/Views.lua")
 dofile(current_mod_path.."/Entry/loadout.lua")
-dofile(current_mod_path.."/weapons/weapons.lua")
+-- weapons/weapons.lua nao e mais carregado: continha apenas codigo morto
+-- (arrays *_ST e a funcao montarRackList que nunca eram consumidos por nenhum arquivo).
+-- O armamento real do AT-27 fica em Entry/AT-27.lua, usando apenas CLSIDs do DCS base.
 dofile(current_mod_path.."/Entry/AT-27.lua")
 dofile(current_mod_path.."/Entry/MK1.lua")
 dofile(current_mod_path.."/Entry/EMB312F.lua")
